@@ -1,10 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import { ExampleComponent } from 'react-authorize'
-import 'react-authorize/dist/index.css'
+import Authorize from 'react-authorize';
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
-}
+  return (
+    <div>
+      <div style={{textAlign: 'center'}}>
+        <Authorize check={['LIST_DASHBOARD', 'EDIT_DASHBOARD']} fallback={<span>test</span>} permissionKey={'PERMISSIONS'}>
+          <button>Go to Dashboard</button>
+        </Authorize>
+      </div>
+    </div>
+  );
+};
 
-export default App
+export default App;
