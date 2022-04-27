@@ -1,7 +1,7 @@
 {
-  "name": "react-authorize",
-  "version": "1.0.0",
-  "description": "A simple react component",
+  "name": "@sakit-sa/react-authorize",
+  "version": "1.1.0",
+  "description": "This component helps to show an element, if you have a permission. It's based on React.",
   "author": "Abdilar",
   "license": "MIT",
   "repository": "Abdilar/react-authorize",
@@ -12,7 +12,7 @@
     "node": ">=10"
   },
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
+    "build": "microbundle-crl --no-compress --css-modules=[local] --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
@@ -49,5 +49,19 @@
   },
   "files": [
     "dist"
+  ],
+  "dependencies": {
+    "prop-types": "^15.8.1"
+  },
+  "keywords": [
+    "sakit-sa",
+    "authorize",
+    "auth",
+    "permission",
+    "authorize UI elements",
+    "authorize element",
+    "react",
+    "javascritp",
+    "component"
   ]
 }

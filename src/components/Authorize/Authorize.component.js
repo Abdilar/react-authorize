@@ -1,32 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import {hasPermission, isEmptyString} from '../../utils/functions';
+import {DEFAULT_PROPS, PROP_TYPES} from './Authorize.config';
 
-const Authorize = ({check, children, permissions}) => {
-  const hasPermission = () => {
-    if (Array.isArray(permissions) && permissions.length) {
-      if (Array.isArray(check)) {
-        return check.every(check => permissions.some(permission => permission === check))
-      } else {
-        return (check === "" || permissions.some(permission => permission === check));
-      }
-    }
-    return false;
-  };
+const Authorize = ({check, children, fallback, permissionKey, permissions}) => {
+  const per = isEmptyString(permissionKey) ? permissions : JSON.parse(localStorage.getItem(permissionKey));
+  const fallbackAuth = fallback ? fallback : null;
 
   return (
-    check ? (hasPermission() ? children : null) : children
+    check ? (hasPermission(per, check) ? children : fallbackAuth) : children
   );
 };
 
-Authorize.defaultProps = {
-  check: '',
-  permissions: []
-};
-
-Authorize.propTypes = {
-  check: PropTypes.any,
-  children: PropTypes.element,
-  permissions: PropTypes.Array
-};
+Authorize.defaultProps = DEFAULT_PROPS;
+Authorize.propTypes = PROP_TYPES;
 
 export {Authorize};
