@@ -1,6 +1,6 @@
 # @sakit-sa/react-authorize
 
-> Simple, easy button for React
+> This component helps to show an element, if you have a permission. It's based on React.
 
 [![NPM](https://img.shields.io/npm/v/@sakit-sa/react-authorize.svg)](https://www.npmjs.com/package/@sakit-sa/react-authorize) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
