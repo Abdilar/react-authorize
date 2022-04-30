@@ -43,6 +43,7 @@ Name | Type | Default | Description
 **check**|`string, array`|`[]`| This value must be exist in permissions prop. this is can a string or strings as array.
 **children**|`element`|`-`|Specifies a content that must be show, if you have a permission.
 **fallback**|`element`|`-`|If you have any permission, it shows instead of children prop.
+**isViceVersa**|`boolean`|`false`|Specifies a boolean value. If the value is false, check prop must be exist in permissions prop and If the value is true, check prop must not be exist in permissions props and actually in this case, children are shown.
 **permissionKey**|`string`|``|Specifies a localStorage's key. It gets permissions from localStorage.
 **permissions**|`array`|`[]`|List of permission as string. note: if permissionKey has a value, permissions are ineffective.
 

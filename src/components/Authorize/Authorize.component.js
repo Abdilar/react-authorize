@@ -1,12 +1,13 @@
 import {hasPermission, isEmptyString} from '../../utils/functions';
 import {DEFAULT_PROPS, PROP_TYPES} from './Authorize.config';
 
-const Authorize = ({check, children, fallback, permissionKey, permissions}) => {
+const Authorize = ({check, children, fallback, isViceVersa, permissionKey, permissions}) => {
   const per = isEmptyString(permissionKey) ? permissions : JSON.parse(localStorage.getItem(permissionKey));
   const fallbackAuth = fallback ? fallback : null;
+  const showChildren = !isViceVersa ? hasPermission(per, check) : !hasPermission(per, check);
 
   return (
-    check ? (hasPermission(per, check) ? children : fallbackAuth) : children
+    check ? (showChildren ? children : fallbackAuth) : children
   );
 };
 
