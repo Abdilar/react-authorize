@@ -1,6 +1,6 @@
 {
   "name": "@sakit-sa/react-authorize",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "This component helps to show an element, if you have a permission. It's based on React.",
   "author": "Abdilar",
   "license": "MIT",
