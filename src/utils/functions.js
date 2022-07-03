@@ -9,6 +9,12 @@ export const hasPermission = (permissions, check) => {
   return false;
 };
 
+export const hasPermissionInLocalStorage = (localStorageKey, check) => {
+  if (isEmptyString(localStorageKey)) return true;
+  const permissions = JSON.parse(localStorage.getItem(localStorageKey));
+  return hasPermission(permissions, check);
+};
+
 export function isEmptyString(data) {
   return !(isString(data) ? data : false);
 }
