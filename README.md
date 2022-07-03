@@ -5,15 +5,12 @@
 [![NPM](https://img.shields.io/npm/v/@sakit-sa/react-authorize.svg)](https://www.npmjs.com/package/@sakit-sa/react-authorize) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Live Playground
-For examples of the react-authorize in action, go to https://abdilar.github.io/react-authorize.
-
-OR
 
 To run that demo on your own computer:
 * Clone this repository
-* `npm install`
-* `npm run storybook`
-* Visit http://localhost:6006/
+* `cd example/`
+* `npm run start`
+* Visit http://localhost:3000/
 
 ## Getting Started
 ### Install
